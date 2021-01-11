@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DeserciónVPH</title>
+    <!-- meta -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- styles -->
+    <link
+      href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+      rel="stylesheet"
+    >
+    {% block css %}{% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="">
+        <br>
+        <h1 class="title" align="center">Deserción a la Vacunación contra el VPH</h1>
+        <hr>
+        <form action="/" method="POST">
+          <div class="field">
+            <table style="width: 100%;">
+              <tr>
+                <td style="width: 30%;">
+                  <label class="label">Lugar Vacunación*</label>
+                  <div class="control">
+                    <select id="lugar_vacunacion" name="lugar_vacunacion" class="input">
+                      <option value="1">Institución Educativa</option>
+                      <option value="2">Establecimiento de Salud</option>
+                      <option value="3">Visita Domiciliaria</option>
+                    </select>
+                  </div>
+                </td>
+                <td style="width: 5%;"></td>
+                <td style="width: 30%;">
+                  <label class="label">Identidad Nacional*</label>
+                  <div class="control">
+                    <select id="identidad_nacional" name="identidad_nacional" class="input">
+                      <option value="1">Nacional</option>
+                      <option value="2">Extranjero</option>
+                    </select>
+                </td>
+              </tr>
+              <br>
+              <tr>
+                <td style="width: 30%;">
+                  <br><label class="label">Edad Inicio*</label>
+                  <div class="control">
+                    <select id="edad_inicio" name="edad_inicio" class="input">
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                    </select>
+                  </div>
+                </td>
+                <td style="width: 5%;"></td>
+                <td style="width: 30%;">
+                  <br><label class="label">Área Zona*</label>
+                  <div class="control">
+                    <select id="area_zona" name="area_zona" class="input">
+                      <option value="1">Rural</option>
+                      <option value="2">Urbana</option>
+                    </select>
+                  </div>
+                </td>                 
+              </tr>               
+              <tr>
+                <td style="width: 30%;">
+                  <br><label class="label">Cantidad Dosis*</label>
+                  <div class="control">
+                    <select id="cantidad_dosis" name="cantidad_dosis" class="input">
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </td>
+                <td style="width: 5%;"></td>
+                <td style="width: 30%;">
+                  <br><label class="label">Mes Acceso*</label>
+                  <div class="control">
+                    <select id="mes_acceso" name="mes_acceso" class="input">
+                      <option value="1">Enero</option>
+                      <option value="2">Febrero</option>
+                      <option value="3">Marzo</option>
+                      <option value="4">Abril</option>
+                      <option value="5">Mayo</option>
+                      <option value="6">Junio</option>
+                      <option value="7">Julio</option>
+                      <option value="8">Agosto</option>
+                      <option value="9">Setiembre</option>
+                      <option value="10">Octubre</option>
+                      <option value="11">Noviembre</option>
+                      <option value="12">Diciembre</option>                                            
+                    </select>
+                  </div>
+                </td>
+              </tr>                                                                               
+            </table>
+
+          </div>
+
+          <br>
+          <input
+            type="submit" class="button is-primary is-fullwidth" style="font-size:13pt;padding:2px; border:1px solid blue; background-color:blue"
+            value="Predecir">
+        </form>
+        <br>
+       
+          {% if predictions %}
+            <label class="label" align="center" style="font-size:15pt;padding:2px">{{ predictions }}</label>
+          {% else %}
+            <p></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    </script>
+    {% block js %}{% endblock %}
+  </body>
+</html>

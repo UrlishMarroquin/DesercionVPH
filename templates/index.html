@@ -12,6 +12,7 @@
       href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
       rel="stylesheet"
     >
+
     {% block css %}{% endblock %}
   </head>
   <body>
@@ -110,9 +111,20 @@
             value="Predecir">
         </form>
         <br>
-       
           {% if predictions %}
             <label class="label" align="center" style="font-size:15pt;padding:2px">{{ predictions }}</label>
+            <script>
+              selectElement('lugar_vacunacion', {{ lugar_vacunacion }})
+              selectElement('identidad_nacional', {{ identidad_nacional }})
+              selectElement('edad_inicio', {{ edad_inicio }})
+              selectElement('area_zona', {{ area_zona }})
+              selectElement('cantidad_dosis', {{ cantidad_dosis }})
+              selectElement('mes_acceso', {{ mes_acceso }})                                                        
+              function selectElement(id, valueToSelect) {    
+                  let element = document.getElementById(id);
+                  element.value = valueToSelect;
+              }    
+            </script>
           {% else %}
             <p></p>
           {% endif %}

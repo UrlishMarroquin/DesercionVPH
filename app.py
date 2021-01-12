@@ -157,7 +157,9 @@ def predict():
             Mensaje = 'Niña con alta probabilidad de completar la vacunación contra el VPH'
         else:
             Mensaje = 'Niña con alta probabilidad de deserción a la vacunación contra el VPH'
-        return render_template("index.html", inputs=features, predictions=Mensaje)
+        return render_template("index.html", inputs=features, predictions=Mensaje, 
+            lugar_vacunacion=lugar_vacunacion, identidad_nacional=identidad_nacional, edad_inicio=edad_inicio, 
+            area_zona=area_zona, cantidad_dosis=cantidad_dosis, mes_acceso=mes_acceso)
 
     return render_template("index.html")
 

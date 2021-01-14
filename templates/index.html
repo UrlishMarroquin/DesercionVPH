@@ -18,97 +18,127 @@
   <body>
     <div class="container">
       <div class="">
-        <br>
-        <h1 class="title" align="center">Deserción a la Vacunación contra el VPH</h1>
-        <hr>
         <form action="/" method="POST">
           <div class="field">
+            <br>
             <table style="width: 100%;">
               <tr>
-                <td style="width: 30%;">
+                <td style="width: 5%;"></td>
+                <td style="width: 90%;">
+                  <h1 class="title" align="center">Deserción a la Vacunación contra el VPH</h1>
+                </td>
+                <td style="width: 5%;"></td>
+              </tr>
+            </table>
+            <table style="width: 100%;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 44%;">
                   <label class="label">Lugar Vacunación*</label>
                   <div class="control">
-                    <select id="lugar_vacunacion" name="lugar_vacunacion" class="input">
-                      <option value="1">Institución Educativa</option>
-                      <option value="2">Establecimiento de Salud</option>
-                      <option value="3">Visita Domiciliaria</option>
-                    </select>
+                    <div class="select is-fullwidth">
+                      <select id="lugar_vacunacion" name="lugar_vacunacion">
+                        <option value="1">Institución Educativa</option>
+                        <option value="2">Establecimiento de Salud</option>
+                        <option value="3">Visita Domiciliaria</option>
+                      </select>
+                    </div>
+                  </div>
+                </td>
+                <td style="width: 2%;"></td>
+                <td style="width: 44%;">
+                  <label class="label">Identidad Nacional*</label>
+                  <div class="control">
+                    <div class="select is-fullwidth">
+                      <select id="identidad_nacional" name="identidad_nacional">
+                        <option value="1">Nacional</option>
+                        <option value="2">Extranjero</option>
+                      </select>
+                    </div>
                   </div>
                 </td>
                 <td style="width: 5%;"></td>
-                <td style="width: 30%;">
-                  <label class="label">Identidad Nacional*</label>
-                  <div class="control">
-                    <select id="identidad_nacional" name="identidad_nacional" class="input">
-                      <option value="1">Nacional</option>
-                      <option value="2">Extranjero</option>
-                    </select>
-                </td>
               </tr>
               <br>
               <tr>
-                <td style="width: 30%;">
+                <td style="width: 5%;"></td>
+                <td style="width: 44%;">
                   <br><label class="label">Edad Inicio*</label>
                   <div class="control">
-                    <select id="edad_inicio" name="edad_inicio" class="input">
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                    </select>
+                    <div class="select is-fullwidth">
+                      <select id="edad_inicio" name="edad_inicio">
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                      </select>
+                    </div>
                   </div>
                 </td>
-                <td style="width: 5%;"></td>
-                <td style="width: 30%;">
+                <td style="width: 2%;"></td>
+                <td style="width: 44%;">
                   <br><label class="label">Área Zona*</label>
                   <div class="control">
-                    <select id="area_zona" name="area_zona" class="input">
-                      <option value="1">Rural</option>
-                      <option value="2">Urbana</option>
-                    </select>
+                    <div class="select is-fullwidth">
+                      <select id="area_zona" name="area_zona">
+                        <option value="1">Rural</option>
+                        <option value="2">Urbana</option>
+                      </select>
+                    </div>
                   </div>
-                </td>                 
+                </td>
+                <td style="width: 5%;"></td>                 
               </tr>               
               <tr>
-                <td style="width: 30%;">
+                <td style="width: 5%;"></td>
+                <td style="width: 44%;">
                   <br><label class="label">Cantidad Dosis*</label>
                   <div class="control">
-                    <select id="cantidad_dosis" name="cantidad_dosis" class="input">
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select>
+                    <div class="select is-fullwidth">
+                      <select id="cantidad_dosis" name="cantidad_dosis">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                </td>
+                <td style="width: 2%;"></td>
+                <td style="width: 44%;">
+                  <br><label class="label">Mes Acceso*</label>
+                  <div class="control">
+                    <div class="select is-fullwidth">
+                      <select id="mes_acceso" name="mes_acceso">
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>                                            
+                      </select>
+                    </div>
                   </div>
                 </td>
                 <td style="width: 5%;"></td>
-                <td style="width: 30%;">
-                  <br><label class="label">Mes Acceso*</label>
-                  <div class="control">
-                    <select id="mes_acceso" name="mes_acceso" class="input">
-                      <option value="1">Enero</option>
-                      <option value="2">Febrero</option>
-                      <option value="3">Marzo</option>
-                      <option value="4">Abril</option>
-                      <option value="5">Mayo</option>
-                      <option value="6">Junio</option>
-                      <option value="7">Julio</option>
-                      <option value="8">Agosto</option>
-                      <option value="9">Setiembre</option>
-                      <option value="10">Octubre</option>
-                      <option value="11">Noviembre</option>
-                      <option value="12">Diciembre</option>                                            
-                    </select>
-                  </div>
-                </td>
               </tr>                                                                               
             </table>
-
+            <br>
+            <table style="width: 100%;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 90%;">
+                  <input type="submit" class="button is-primary is-fullwidth" style="font-size:13pt;padding:2px; border:1px solid blue; background-color:blue" value="Predecir">
+                </td>
+                <td style="width: 5%;"></td>
+              </tr>
+            </table>
           </div>
-
-          <br>
-          <input
-            type="submit" class="button is-primary is-fullwidth" style="font-size:13pt;padding:2px; border:1px solid blue; background-color:blue"
-            value="Predecir">
         </form>
         <br>
           {% if predictions %}

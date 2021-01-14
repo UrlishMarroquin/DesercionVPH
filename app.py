@@ -29,10 +29,10 @@ def api_predict():
         LV_01 = 0
         LV_02 = 0
         IN_01 = 0
-        EI_00 = 0
+        EI_01 = 0
         AZ_01 = 0
-        CD_02 = 0
-        MA_00 = 0
+        CD_01 = 0
+        MA_01 = 0
         lugar_vacunacion = req_data['lugar_vacunacion']
         identidad_nacional = req_data['identidad_nacional']
         edad_inicio = req_data['edad_inicio']
@@ -62,20 +62,17 @@ def api_predict():
             IN_01 = 1
         if identidad_nacional == '2':
             IN_01 = 0
-        EI_00 = int(edad_inicio)
+        EI_01 = int(edad_inicio)
         if area_zona == '1':
             AZ_01 = 1
         if area_zona == '2':
             AZ_01 = 0
-        if cantidad_dosis == '2':
-            CD_02 = 1
-        if cantidad_dosis == '3':
-            CD_02 = 0
-        MA_00 = int(mes_acceso)
+        CD_01 = int(cantidad_dosis)
+        MA_01 = int(mes_acceso)
 
-        Xnew = [LV_01,LV_02,IN_01,EI_00,AZ_01,CD_02,MA_00]
+        Xnew = [LV_01,LV_02,IN_01,EI_01,AZ_01,CD_01,MA_01]
 
-        dataXnewValues = [["LV_01", "LV_02", "IN_01", "EI_00", "AZ_01", "CD_02", "MA_00"], Xnew]
+        dataXnewValues = [["LV_01", "LV_02", "IN_01", "EI_01", "AZ_01", "CD_01", "MA_01"], Xnew]
 
         dataXnewColumns = dataXnewValues.pop(0)
 
@@ -101,10 +98,10 @@ def predict():
         LV_01 = 0
         LV_02 = 0
         IN_01 = 0
-        EI_00 = 0
+        EI_01 = 0
         AZ_01 = 0
-        CD_02 = 0
-        MA_00 = 0
+        CD_01 = 0
+        MA_01 = 0
         lugar_vacunacion = request.form.get('lugar_vacunacion')
         identidad_nacional = request.form.get('identidad_nacional')
         edad_inicio = request.form.get('edad_inicio')
@@ -132,20 +129,17 @@ def predict():
             IN_01 = 1
         if identidad_nacional == '2':
             IN_01 = 0
-        EI_00 = int(edad_inicio)
+        EI_01 = int(edad_inicio)
         if area_zona == '1':
             AZ_01 = 1
         if area_zona == '2':
             AZ_01 = 0
-        if cantidad_dosis == '2':
-            CD_02 = 1
-        if cantidad_dosis == '3':
-            CD_02 = 0
-        MA_00 = int(mes_acceso)
+        CD_01 = int(cantidad_dosis)
+        MA_01 = int(mes_acceso)
 
-        Xnew = [LV_01,LV_02,IN_01,EI_00,AZ_01,CD_02,MA_00]
+        Xnew = [LV_01,LV_02,IN_01,EI_01,AZ_01,CD_01,MA_01]
 
-        dataXnewValues = [["LV_01", "LV_02", "IN_01", "EI_00", "AZ_01", "CD_02", "MA_00"], Xnew]
+        dataXnewValues = [["LV_01", "LV_02", "IN_01", "EI_01", "AZ_01", "CD_01", "MA_01"], Xnew]
 
         dataXnewColumns = dataXnewValues.pop(0)
 

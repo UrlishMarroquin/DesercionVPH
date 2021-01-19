@@ -33,8 +33,8 @@
             <table style="width: 100%;">
               <tr>
                 <td style="width: 5%;"></td>
-                <td style="width: 44%;">
-                  <label class="label">Lugar Vacunación*</label>
+                <td style="width: 90%;">
+                  <br><label class="label">Lugar Vacunación*</label>
                   <div class="control">
                     <div class="select is-fullwidth">
                       <select id="lugar_vacunacion" name="lugar_vacunacion">
@@ -45,9 +45,12 @@
                     </div>
                   </div>
                 </td>
-                <td style="width: 2%;"></td>
-                <td style="width: 44%;">
-                  <label class="label">Identidad Nacional*</label>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 90%;">
+                  <br><label class="label">Identidad Nacional*</label>
                   <div class="control">
                     <div class="select is-fullwidth">
                       <select id="identidad_nacional" name="identidad_nacional">
@@ -58,11 +61,10 @@
                   </div>
                 </td>
                 <td style="width: 5%;"></td>
-              </tr>
-              <br>
+              </tr>            
               <tr>
                 <td style="width: 5%;"></td>
-                <td style="width: 44%;">
+                <td style="width: 90%;">
                   <br><label class="label">Edad Inicio*</label>
                   <div class="control">
                     <div class="select is-fullwidth">
@@ -76,8 +78,11 @@
                     </div>
                   </div>
                 </td>
-                <td style="width: 2%;"></td>
-                <td style="width: 44%;">
+                <td style="width: 5%;"></td>                 
+              </tr>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 90%;">
                   <br><label class="label">Área Zona*</label>
                   <div class="control">
                     <div class="select is-fullwidth">
@@ -89,22 +94,10 @@
                   </div>
                 </td>
                 <td style="width: 5%;"></td>                 
-              </tr>               
+              </tr>                                  
               <tr>
                 <td style="width: 5%;"></td>
-                <td style="width: 44%;">
-                  <br><label class="label">Cantidad Dosis*</label>
-                  <div class="control">
-                    <div class="select is-fullwidth">
-                      <select id="cantidad_dosis" name="cantidad_dosis">
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                      </select>
-                    </div>
-                  </div>
-                </td>
-                <td style="width: 2%;"></td>
-                <td style="width: 44%;">
+                <td style="width: 90%;">
                   <br><label class="label">Mes Acceso*</label>
                   <div class="control">
                     <div class="select is-fullwidth">
@@ -148,7 +141,6 @@
               selectElement('identidad_nacional', {{ identidad_nacional }})
               selectElement('edad_inicio', {{ edad_inicio }})
               selectElement('area_zona', {{ area_zona }})
-              selectElement('cantidad_dosis', {{ cantidad_dosis }})
               selectElement('mes_acceso', {{ mes_acceso }})                                                        
               function selectElement(id, valueToSelect) {    
                   let element = document.getElementById(id);

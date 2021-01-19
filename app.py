@@ -31,13 +31,11 @@ def api_predict():
         IN_01 = 0
         EI_01 = 0
         AZ_01 = 0
-        CD_01 = 0
         MA_01 = 0
         lugar_vacunacion = req_data['lugar_vacunacion']
         identidad_nacional = req_data['identidad_nacional']
         edad_inicio = req_data['edad_inicio']
         area_zona = req_data['area_zona']
-        cantidad_dosis = req_data['cantidad_dosis']
         mes_acceso = req_data['mes_acceso']
 
         features = { 
@@ -45,7 +43,6 @@ def api_predict():
             'identidad_nacional': identidad_nacional,
             'edad_inicio': edad_inicio,
             'area_zona': area_zona,
-            'cantidad_dosis': cantidad_dosis,
             'mes_acceso': mes_acceso
         }
 
@@ -67,12 +64,11 @@ def api_predict():
             AZ_01 = 1
         if area_zona == '2':
             AZ_01 = 0
-        CD_01 = int(cantidad_dosis)
         MA_01 = int(mes_acceso)
 
-        Xnew = [LV_01,LV_02,IN_01,EI_01,AZ_01,CD_01,MA_01]
+        Xnew = [LV_01,LV_02,IN_01,EI_01,AZ_01,MA_01]
 
-        dataXnewValues = [["LV_01", "LV_02", "IN_01", "EI_01", "AZ_01", "CD_01", "MA_01"], Xnew]
+        dataXnewValues = [["LV_01", "LV_02", "IN_01", "EI_01", "AZ_01", "MA_01"], Xnew]
 
         dataXnewColumns = dataXnewValues.pop(0)
 
@@ -100,20 +96,17 @@ def predict():
         IN_01 = 0
         EI_01 = 0
         AZ_01 = 0
-        CD_01 = 0
         MA_01 = 0
         lugar_vacunacion = request.form.get('lugar_vacunacion')
         identidad_nacional = request.form.get('identidad_nacional')
         edad_inicio = request.form.get('edad_inicio')
         area_zona = request.form.get('area_zona')
-        cantidad_dosis = request.form.get('cantidad_dosis')
         mes_acceso = request.form.get('mes_acceso')
         features = { 
             'lugar_vacunacion': lugar_vacunacion,
             'identidad_nacional': identidad_nacional,
             'edad_inicio': edad_inicio,
             'area_zona': area_zona,
-            'cantidad_dosis': cantidad_dosis,
             'mes_acceso': mes_acceso
         }
         if lugar_vacunacion == '1':
@@ -134,12 +127,11 @@ def predict():
             AZ_01 = 1
         if area_zona == '2':
             AZ_01 = 0
-        CD_01 = int(cantidad_dosis)
         MA_01 = int(mes_acceso)
 
-        Xnew = [LV_01,LV_02,IN_01,EI_01,AZ_01,CD_01,MA_01]
+        Xnew = [LV_01,LV_02,IN_01,EI_01,AZ_01,MA_01]
 
-        dataXnewValues = [["LV_01", "LV_02", "IN_01", "EI_01", "AZ_01", "CD_01", "MA_01"], Xnew]
+        dataXnewValues = [["LV_01", "LV_02", "IN_01", "EI_01", "AZ_01", "MA_01"], Xnew]
 
         dataXnewColumns = dataXnewValues.pop(0)
 
@@ -152,8 +144,8 @@ def predict():
         else:
             Mensaje = 'Niña con alta probabilidad de deserción a la vacunación contra el VPH'
         return render_template("index.html", inputs=features, predictions=Mensaje, 
-            lugar_vacunacion=lugar_vacunacion, identidad_nacional=identidad_nacional, edad_inicio=edad_inicio, 
-            area_zona=area_zona, cantidad_dosis=cantidad_dosis, mes_acceso=mes_acceso)
+            lugar_vacunacion=lugar_vacunacion, identidad_nacional=identidad_nacional, 
+            edad_inicio=edad_inicio, area_zona=area_zona, mes_acceso=mes_acceso)
 
     return render_template("index.html")
 

@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    body{
+      line-height:1.5;
+      background-image: url('/static/img/fondo.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size:10px;
+    }
+    p {
+      color: blue;
+      background-color: white;
+    }
+    b {
+      color: blue;
+    }
+  </style>
   <head>
     <meta charset="utf-8">
     <title>DeserciónVPH</title>
@@ -23,18 +40,18 @@
             <br>
             <table style="width: 100%;">
               <tr>
-                <td style="width: 5%;"></td>
-                <td style="width: 90%;">
-                  <h1 class="title" align="center">Deserción a la Vacunación contra el VPH</h1>
+                <td style="width: 10%;"></td>
+                <td style="width: 80%;">
+                  <h1 class="title" align="center"><p>Deserción a la Vacunación contra el VPH</p></h1>
                 </td>
-                <td style="width: 5%;"></td>
+                <td style="width: 10%;"></td>
               </tr>
             </table>
             <table style="width: 100%;">
               <tr>
-                <td style="width: 5%;"></td>
-                <td style="width: 90%;">
-                  <br><label class="label">Lugar Vacunación*</label>
+                <td style="width: 10%;"></td>
+                <td style="width: 80%;">
+                  <br><label class="label"><b>Lugar Vacunación*</b></label>
                   <div class="control">
                     <div class="select is-fullwidth">
                       <select id="lugar_vacunacion" name="lugar_vacunacion">
@@ -45,12 +62,12 @@
                     </div>
                   </div>
                 </td>
-                <td style="width: 5%;"></td>
+                <td style="width: 10%;"></td>
               </tr>
               <tr>
-                <td style="width: 5%;"></td>
-                <td style="width: 90%;">
-                  <br><label class="label">Identidad Nacional*</label>
+                <td style="width: 10%;"></td>
+                <td style="width: 80%;">
+                  <br><label class="label"><b>Identidad Nacional*</b></label>
                   <div class="control">
                     <div class="select is-fullwidth">
                       <select id="identidad_nacional" name="identidad_nacional">
@@ -60,12 +77,12 @@
                     </div>
                   </div>
                 </td>
-                <td style="width: 5%;"></td>
+                <td style="width: 10%;"></td>
               </tr>            
               <tr>
-                <td style="width: 5%;"></td>
-                <td style="width: 90%;">
-                  <br><label class="label">Edad Inicio*</label>
+                <td style="width: 10%;"></td>
+                <td style="width: 80%;">
+                  <br><label class="label"><b>Edad Inicio*</b></label>
                   <div class="control">
                     <div class="select is-fullwidth">
                       <select id="edad_inicio" name="edad_inicio">
@@ -78,12 +95,12 @@
                     </div>
                   </div>
                 </td>
-                <td style="width: 5%;"></td>                 
+                <td style="width: 10%;"></td>                 
               </tr>
               <tr>
-                <td style="width: 5%;"></td>
-                <td style="width: 90%;">
-                  <br><label class="label">Área Zona*</label>
+                <td style="width: 10%;"></td>
+                <td style="width: 80%;">
+                  <br><label class="label"><b>Área Zona*</b></label>
                   <div class="control">
                     <div class="select is-fullwidth">
                       <select id="area_zona" name="area_zona">
@@ -93,12 +110,12 @@
                     </div>
                   </div>
                 </td>
-                <td style="width: 5%;"></td>                 
+                <td style="width: 10%;"></td>                 
               </tr>                                  
               <tr>
-                <td style="width: 5%;"></td>
-                <td style="width: 90%;">
-                  <br><label class="label">Mes Acceso*</label>
+                <td style="width: 10%;"></td>
+                <td style="width: 80%;">
+                  <br><label class="label"><b>Mes Acceso*</b></label>
                   <div class="control">
                     <div class="select is-fullwidth">
                       <select id="mes_acceso" name="mes_acceso">
@@ -118,24 +135,43 @@
                     </div>
                   </div>
                 </td>
-                <td style="width: 5%;"></td>
+                <td style="width: 10%;"></td>
               </tr>                                                                               
             </table>
             <br>
             <table style="width: 100%;">
               <tr>
-                <td style="width: 5%;"></td>
-                <td style="width: 90%;">
+                <td style="width: 10%;"></td>
+                <td style="width: 80%;">
                   <input type="submit" class="button is-primary is-fullwidth" style="font-size:13pt;padding:2px; border:1px solid blue; background-color:blue" value="Predecir">
                 </td>
-                <td style="width: 5%;"></td>
+                <td style="width: 10%;"></td>
               </tr>
             </table>
           </div>
         </form>
         <br>
           {% if predictions %}
-            <label class="label" align="center" style="font-size:15pt;padding:2px">{{ predictions }}</label>
+            <table style="width: 100%;">
+              <tr>
+                <td style="width: 10%;"></td>
+                <td style="width: 80%;">
+                  <label class="label" align="center" style="font-size:15pt;padding:2px"><p>Resultado de la Predicción</p></label>
+                </td>
+                <td style="width: 10%;"></td>
+              </tr>
+            </table>
+            <table style="width: 100%;">
+              <tr>
+                <td style="width: 10%;"></td>
+                <td style="width: 80%;">
+                  <label class="label" align="center" style="font-size:14pt;padding:2px"><p>{{ predictions }}</p></label>
+                </td>
+                <td style="width: 10%;"></td>
+              </tr>
+            </table>
+            
+            
             <script>
               selectElement('lugar_vacunacion', {{ lugar_vacunacion }})
               selectElement('identidad_nacional', {{ identidad_nacional }})
@@ -155,5 +191,6 @@
     </div>
     </script>
     {% block js %}{% endblock %}
+    <br>
   </body>
 </html>

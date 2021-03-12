@@ -77,9 +77,9 @@ def api_predict():
         Ynew = XGB.predict(dataXnewDf)
 
         if Ynew[0] == 0:
-            Mensaje = 'Niña con alta probabilidad de completar la vacunación contra el VPH'
+            Mensaje = 'Girl with high probability of no HPV vaccination dropout'
         else:
-            Mensaje = 'Niña con alta probabilidad de deserción a la vacunación contra el VPH'
+            Mensaje = 'Girl with high probability of HPV vaccination dropout'
 
         return jsonify( inputs=features,predictions=Mensaje)
 
@@ -140,9 +140,9 @@ def predict():
         Ynew = XGB.predict(dataXnewDf)
 
         if Ynew[0] == 0:
-            Mensaje = 'Niña con alta probabilidad de completar la vacunación contra el VPH'
+            Mensaje = 'Girl with high probability of no HPV vaccination dropout'
         else:
-            Mensaje = 'Niña con alta probabilidad de deserción a la vacunación contra el VPH'
+            Mensaje = 'Girl with high probability of HPV vaccination dropout'
         return render_template("index.html", inputs=features, predictions=Mensaje, 
             lugar_vacunacion=lugar_vacunacion, identidad_nacional=identidad_nacional, 
             edad_inicio=edad_inicio, area_zona=area_zona, mes_acceso=mes_acceso)
